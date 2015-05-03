@@ -22,6 +22,8 @@
 		96A5BAE11AF6A604004587AC /* LibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAE01AF6A604004587AC /* LibraryAPI.m */; };
 		96A5BAE51AF6A7D2004587AC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAE41AF6A7D2004587AC /* User.m */; };
 		96A5BAE81AF6A8E9004587AC /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAE71AF6A8E9004587AC /* Notification.m */; };
+		96A5BAED1AF6AC83004587AC /* BasePaginationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAEC1AF6AC83004587AC /* BasePaginationTableViewController.m */; };
+		96A5BAF21AF6AD17004587AC /* UINotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAF11AF6AD17004587AC /* UINotificationTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		96A5BAE41AF6A7D2004587AC /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		96A5BAE61AF6A8E9004587AC /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
 		96A5BAE71AF6A8E9004587AC /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
+		96A5BAEB1AF6AC83004587AC /* BasePaginationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePaginationTableViewController.h; sourceTree = "<group>"; };
+		96A5BAEC1AF6AC83004587AC /* BasePaginationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePaginationTableViewController.m; sourceTree = "<group>"; };
+		96A5BAF01AF6AD17004587AC /* UINotificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINotificationTableViewCell.h; sourceTree = "<group>"; };
+		96A5BAF11AF6AD17004587AC /* UINotificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINotificationTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,8 @@
 		96A5BAAB1AF6A21F004587AC /* YouLocal */ = {
 			isa = PBXGroup;
 			children = (
+				96A5BAEE1AF6ACEE004587AC /* Views */,
+				96A5BAE91AF6AC83004587AC /* Controllers */,
 				96A5BAE21AF6A7C7004587AC /* Models */,
 				96A5BAD51AF6A4A6004587AC /* API */,
 				96A5BAB01AF6A21F004587AC /* AppDelegate.h */,
@@ -190,6 +198,40 @@
 				96A5BAE71AF6A8E9004587AC /* Notification.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		96A5BAE91AF6AC83004587AC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96A5BAEA1AF6AC83004587AC /* Base */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96A5BAEA1AF6AC83004587AC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				96A5BAEB1AF6AC83004587AC /* BasePaginationTableViewController.h */,
+				96A5BAEC1AF6AC83004587AC /* BasePaginationTableViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		96A5BAEE1AF6ACEE004587AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96A5BAEF1AF6ACFC004587AC /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96A5BAEF1AF6ACFC004587AC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				96A5BAF01AF6AD17004587AC /* UINotificationTableViewCell.h */,
+				96A5BAF11AF6AD17004587AC /* UINotificationTableViewCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +374,8 @@
 				96A5BAB51AF6A21F004587AC /* ViewController.m in Sources */,
 				96A5BADB1AF6A5A1004587AC /* Collection.m in Sources */,
 				96A5BAE81AF6A8E9004587AC /* Notification.m in Sources */,
+				96A5BAF21AF6AD17004587AC /* UINotificationTableViewCell.m in Sources */,
+				96A5BAED1AF6AC83004587AC /* BasePaginationTableViewController.m in Sources */,
 				96A5BAB21AF6A21F004587AC /* AppDelegate.m in Sources */,
 				96A5BAE11AF6A604004587AC /* LibraryAPI.m in Sources */,
 				96A5BAD81AF6A4E6004587AC /* HTTPClient.m in Sources */,

@@ -9,11 +9,19 @@
 #import <Foundation/Foundation.h>
 #import "HTTPClient.h"
 #import "PersistencyManager.h"
+#import "User.h"
+#import "Notification.h"
+
+@protocol LibraryAPIDelegate;
 
 @interface LibraryAPI : NSObject <HTTPClientDelegate> {
     @protected PersistencyManager *persistencyManager;
     @protected HTTPClient *httpClient;
 }
+
+@property (weak, nonatomic) id <LibraryAPIDelegate> delegate;
+
++ (LibraryAPI*) sharedInstance;
 
 - (NSArray *) getObjects;
 - (void) setObjectsFromArray: (NSArray*) array;
@@ -28,5 +36,15 @@
 - (int) to;
 
 - (void) setEmptyPersistencyManagerToStopPreloading;
+
+- (void) loadNotifications;
+
+@end
+
+
+@protocol LibraryAPIDelegate <NSObject>
+
+- (void) notificationsFailedWithError:(NSError *) error;
+- (void) notificationsSuccessfullyLoaded;
 
 @end

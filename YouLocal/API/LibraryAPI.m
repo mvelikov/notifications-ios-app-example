@@ -95,4 +95,71 @@
                                                    }];
 }
 
+- (void) loadNotifications {
+    [httpClient loadNotifications];
+}
+
+#pragma mark HTTPClientDelegate
+
+- (void) notificationsSuccessfullyLoadedWithResponse:(id)response {
+    NSString *isSuccessful = [response valueForKey:@"success"];
+    
+    if ([isSuccessful isEqualToString:@"success"]) {
+        int i = 0;
+        User *user;
+        Notification *notification;
+        NSMutableArray *notificationsList = [[NSMutableArray alloc] init];
+
+        for (id tmpNotification in [response valueForKey:@"notifications"]) {
+            if (++i >= 10) {
+                break;
+            }
+
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            
+            [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            
+            NSDate *tmpDate = [[NSDate alloc] init];
+            tmpDate = [formatter dateFromString:[tmpNotification valueForKey:@"createdAt"]];
+            user = [[User alloc] initWithUserId:[tmpNotification valueForKey:@"id"]
+                                         gender:[tmpNotification valueForKey:@"gender"]
+                                       fullName:[tmpNotification valueForKey:@"fullname"]
+                                       avatar50:[tmpNotification valueForKey:@"avatar_50"]
+                                      andAvatar:[tmpNotification valueForKey:@"avatar"]];
+            
+            
+            notification = [[Notification alloc] initWithUser:user
+                                                         type:[tmpNotification valueForKey:@"notificationType"]
+                                                      message:[tmpNotification valueForKey:@"notificationTypeText"]
+                                                      andDate:tmpDate];
+            
+            [notificationsList addObject:notification];
+        }
+        
+        [persistencyManager setObjectsFromDictionary:@{
+                                                       @"data" : notificationsList,
+                                                       @"total" : @10,
+                                                       @"lastPage" : @1,
+                                                       @"perPage" : @10,
+                                                       @"currentPage" : @1,
+                                                       @"from" : @1
+                                                       }];
+    } else {
+        [self setEmptyPersistencyManagerToStopPreloading];
+    }
+    id <LibraryAPIDelegate> strongDelegate = self.delegate;
+    
+    if ([strongDelegate respondsToSelector:@selector(notificationsSuccessfullyLoaded)]) {
+        [strongDelegate notificationsSuccessfullyLoaded];
+    }
+}
+
+- (void) notificationsFailedWithError:(NSError *)error {
+    id <LibraryAPIDelegate> strongDelegate = self.delegate;
+    
+    if ([strongDelegate respondsToSelector:@selector(notificationsFailedWithError:)]) {
+        [strongDelegate notificationsFailedWithError:error];
+    }
+}
+
 @end

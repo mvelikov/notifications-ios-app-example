@@ -18,6 +18,8 @@
     [super viewDidLoad];
 
     self.title = @"Notifications";
+    
+    [[LibraryAPI sharedInstance] setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,9 +48,15 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView notificationCellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"notificationCell" forIndexPath:indexPath];
+    NotificationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"notificationCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    Notification *notification = [[self items] objectAtIndex:indexPath.row];
+    User *user = [notification user];
+    
+    [cell.avatarImage sd_setImageWithURL:[notification imageURL]];
+    [cell.nameLabel setText:[user fullName]];
+    [cell.typeLabel setText:[notification type]];
+    [cell.messageLabel setText:[notification message]];
     
     return cell;
 }

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UINotificationTableViewCell : UITableViewCell
+@interface NotificationTableViewCell : UITableViewCell
 
 @end

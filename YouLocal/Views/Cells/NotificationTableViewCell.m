@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 YouLoc.al. All rights reserved.
 //
 
-#import "UINotificationTableViewCell.h"
+#import "NotificationTableViewCell.h"
 
-@implementation UINotificationTableViewCell
+@implementation NotificationTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

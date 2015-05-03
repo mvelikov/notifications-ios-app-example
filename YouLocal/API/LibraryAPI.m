@@ -111,7 +111,7 @@
         NSMutableArray *notificationsList = [[NSMutableArray alloc] init];
 
         for (id tmpNotification in [response valueForKey:@"notifications"]) {
-            if (++i >= 10) {
+            if (++i > 10) {
                 break;
             }
 

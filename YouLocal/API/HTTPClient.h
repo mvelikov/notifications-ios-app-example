@@ -16,7 +16,12 @@
 }
 @property (nonatomic, weak) id <HTTPClientDelegate> delegate;
 
+- (void) loadNotifications;
+
 @end
 
 @protocol HTTPClientDelegate <NSObject>
+
+- (void) notificationsSuccessfullyLoadedWithResponse:(id) response;
+- (void) notificationsFailedWithError: (NSError *) error;
 @end

@@ -14,7 +14,7 @@
 - (id) init {
     if (self = [super init]) {
         manager = [AFHTTPRequestOperationManager manager];
-        [manager.requestSerializer setTimeoutInterval:10];
+//        [manager.requestSerializer setTimeoutInterval:10];
     }
     
     return self;

@@ -10,4 +10,10 @@
 
 @interface NotificationTableViewCell : UITableViewCell
 
+@property (nonatomic, weak) UIImageView *avatarImage;
+@property (nonatomic, weak) UIImageView *typeImage;
+@property (nonatomic, weak) UILabel *authorNameLabel;
+@property (nonatomic, weak) UILabel *createdBeforeLabel;
+@property (nonatomic, weak) UILabel *messageLabel;
+
 @end

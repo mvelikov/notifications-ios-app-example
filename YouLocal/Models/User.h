@@ -12,4 +12,9 @@
 
 @property (nonatomic) NSString *userId, *gender, *fullName, *avatar50, *avatar;
 
+- (id) initWithUserId: (NSString *) userId
+               gender: (NSString *) gender
+             fullName: (NSString *) fullName
+             avatar50: (NSString *) avatar50
+            andAvatar: (NSString *) avatar;
 @end

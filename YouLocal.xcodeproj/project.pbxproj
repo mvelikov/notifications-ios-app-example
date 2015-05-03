@@ -19,6 +19,7 @@
 		96A5BAD81AF6A4E6004587AC /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAD71AF6A4E6004587AC /* HTTPClient.m */; };
 		96A5BADB1AF6A5A1004587AC /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BADA1AF6A5A1004587AC /* Collection.m */; };
 		96A5BADE1AF6A5C8004587AC /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BADD1AF6A5C8004587AC /* PersistencyManager.m */; };
+		96A5BAE11AF6A604004587AC /* LibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAE01AF6A604004587AC /* LibraryAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		96A5BADA1AF6A5A1004587AC /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
 		96A5BADC1AF6A5C8004587AC /* PersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistencyManager.h; sourceTree = "<group>"; };
 		96A5BADD1AF6A5C8004587AC /* PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistencyManager.m; sourceTree = "<group>"; };
+		96A5BADF1AF6A604004587AC /* LibraryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryAPI.h; sourceTree = "<group>"; };
+		96A5BAE01AF6A604004587AC /* LibraryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 				96A5BADA1AF6A5A1004587AC /* Collection.m */,
 				96A5BAD61AF6A4E6004587AC /* HTTPClient.h */,
 				96A5BAD71AF6A4E6004587AC /* HTTPClient.m */,
+				96A5BADF1AF6A604004587AC /* LibraryAPI.h */,
+				96A5BAE01AF6A604004587AC /* LibraryAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				96A5BAB51AF6A21F004587AC /* ViewController.m in Sources */,
 				96A5BADB1AF6A5A1004587AC /* Collection.m in Sources */,
 				96A5BAB21AF6A21F004587AC /* AppDelegate.m in Sources */,
+				96A5BAE11AF6A604004587AC /* LibraryAPI.m in Sources */,
 				96A5BAD81AF6A4E6004587AC /* HTTPClient.m in Sources */,
 				96A5BAAF1AF6A21F004587AC /* main.m in Sources */,
 				96A5BADE1AF6A5C8004587AC /* PersistencyManager.m in Sources */,

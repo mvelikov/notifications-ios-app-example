@@ -10,7 +10,6 @@
 		58EA3DD7031EA4A2378B593C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 229CAD64CC877EBAC099F8A1 /* libPods.a */; };
 		96A5BAAF1AF6A21F004587AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAAE1AF6A21F004587AC /* main.m */; };
 		96A5BAB21AF6A21F004587AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAB11AF6A21F004587AC /* AppDelegate.m */; };
-		96A5BAB51AF6A21F004587AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAB41AF6A21F004587AC /* ViewController.m */; };
 		96A5BAB81AF6A21F004587AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A5BAB61AF6A21F004587AC /* Main.storyboard */; };
 		96A5BABA1AF6A21F004587AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A5BAB91AF6A21F004587AC /* Images.xcassets */; };
 		96A5BABD1AF6A21F004587AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A5BABB1AF6A21F004587AC /* LaunchScreen.xib */; };
@@ -23,7 +22,8 @@
 		96A5BAE51AF6A7D2004587AC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAE41AF6A7D2004587AC /* User.m */; };
 		96A5BAE81AF6A8E9004587AC /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAE71AF6A8E9004587AC /* Notification.m */; };
 		96A5BAED1AF6AC83004587AC /* BasePaginationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAEC1AF6AC83004587AC /* BasePaginationTableViewController.m */; };
-		96A5BAF21AF6AD17004587AC /* UINotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAF11AF6AD17004587AC /* UINotificationTableViewCell.m */; };
+		96A5BAF21AF6AD17004587AC /* NotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAF11AF6AD17004587AC /* NotificationTableViewCell.m */; };
+		96A5BAF51AF6ADB3004587AC /* NotificationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAF41AF6ADB3004587AC /* NotificationsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +45,6 @@
 		96A5BAAE1AF6A21F004587AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96A5BAB01AF6A21F004587AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96A5BAB11AF6A21F004587AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		96A5BAB31AF6A21F004587AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		96A5BAB41AF6A21F004587AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		96A5BAB71AF6A21F004587AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96A5BAB91AF6A21F004587AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		96A5BABC1AF6A21F004587AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -68,8 +66,10 @@
 		96A5BAE71AF6A8E9004587AC /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		96A5BAEB1AF6AC83004587AC /* BasePaginationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePaginationTableViewController.h; sourceTree = "<group>"; };
 		96A5BAEC1AF6AC83004587AC /* BasePaginationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePaginationTableViewController.m; sourceTree = "<group>"; };
-		96A5BAF01AF6AD17004587AC /* UINotificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINotificationTableViewCell.h; sourceTree = "<group>"; };
-		96A5BAF11AF6AD17004587AC /* UINotificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINotificationTableViewCell.m; sourceTree = "<group>"; };
+		96A5BAF01AF6AD17004587AC /* NotificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationTableViewCell.h; sourceTree = "<group>"; };
+		96A5BAF11AF6AD17004587AC /* NotificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationTableViewCell.m; sourceTree = "<group>"; };
+		96A5BAF31AF6ADB3004587AC /* NotificationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsTableViewController.h; sourceTree = "<group>"; };
+		96A5BAF41AF6ADB3004587AC /* NotificationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +138,6 @@
 				96A5BAD51AF6A4A6004587AC /* API */,
 				96A5BAB01AF6A21F004587AC /* AppDelegate.h */,
 				96A5BAB11AF6A21F004587AC /* AppDelegate.m */,
-				96A5BAB31AF6A21F004587AC /* ViewController.h */,
-				96A5BAB41AF6A21F004587AC /* ViewController.m */,
 				96A5BAB61AF6A21F004587AC /* Main.storyboard */,
 				96A5BAB91AF6A21F004587AC /* Images.xcassets */,
 				96A5BABB1AF6A21F004587AC /* LaunchScreen.xib */,
@@ -204,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				96A5BAEA1AF6AC83004587AC /* Base */,
+				96A5BAF31AF6ADB3004587AC /* NotificationsTableViewController.h */,
+				96A5BAF41AF6ADB3004587AC /* NotificationsTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,8 +228,8 @@
 		96A5BAEF1AF6ACFC004587AC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				96A5BAF01AF6AD17004587AC /* UINotificationTableViewCell.h */,
-				96A5BAF11AF6AD17004587AC /* UINotificationTableViewCell.m */,
+				96A5BAF01AF6AD17004587AC /* NotificationTableViewCell.h */,
+				96A5BAF11AF6AD17004587AC /* NotificationTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -371,11 +371,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				96A5BAE51AF6A7D2004587AC /* User.m in Sources */,
-				96A5BAB51AF6A21F004587AC /* ViewController.m in Sources */,
 				96A5BADB1AF6A5A1004587AC /* Collection.m in Sources */,
 				96A5BAE81AF6A8E9004587AC /* Notification.m in Sources */,
-				96A5BAF21AF6AD17004587AC /* UINotificationTableViewCell.m in Sources */,
+				96A5BAF21AF6AD17004587AC /* NotificationTableViewCell.m in Sources */,
 				96A5BAED1AF6AC83004587AC /* BasePaginationTableViewController.m in Sources */,
+				96A5BAF51AF6ADB3004587AC /* NotificationsTableViewController.m in Sources */,
 				96A5BAB21AF6A21F004587AC /* AppDelegate.m in Sources */,
 				96A5BAE11AF6A604004587AC /* LibraryAPI.m in Sources */,
 				96A5BAD81AF6A4E6004587AC /* HTTPClient.m in Sources */,

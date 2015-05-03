@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BasePaginationTableViewController.h"
 
-@interface NotificationsTableViewController : UITableViewController
+@interface NotificationsTableViewController : BasePaginationTableViewController
 
 @end

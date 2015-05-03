@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BasePaginationTableViewController.h"
+#import "LibraryAPI.h"
 
-@interface NotificationsTableViewController : BasePaginationTableViewController
+@interface NotificationsTableViewController : BasePaginationTableViewController <LibraryAPIDelegate>
 
 @end

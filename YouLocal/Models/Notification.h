@@ -20,5 +20,6 @@
               type: (NSString *) type
            message: (NSString *) message
            andDate: (NSDate *) date;
-
+-(NSInteger) createdBeforeLabel;
+-(NSString *) createdBeforeSign;
 @end

@@ -43,4 +43,17 @@
     return [_user fullName];
 }
 
+-(NSInteger) createdBeforeLabel {
+    NSDate *now = [NSDate date];
+    
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [gregorianCalendar components:NSCalendarUnitDay
+                                                        fromDate:_createdAt
+                                                          toDate:now
+                                                         options:NSCalendarWrapComponents];
+    return [components day];
+}
+-(NSString *) createdBeforeSign {
+    return @"d";
+}
 @end

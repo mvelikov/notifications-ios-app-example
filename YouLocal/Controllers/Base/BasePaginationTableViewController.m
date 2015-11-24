@@ -22,8 +22,13 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([self.tableView respondsToSelector:@selector(layoutMargins)]) {
+        self.tableView.layoutMargins = UIEdgeInsetsZero;
+    }
+
     [self.view addSubview:self.tableView];
 }
 - (void) preloadItems {
@@ -54,18 +59,64 @@
                              initWithStyle:UITableViewCellStyleDefault
                              reuseIdentifier:nil];
     
-    UIActivityIndicatorView *activityIndicator =
-    [[UIActivityIndicatorView alloc]
-     initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    activityIndicator.center = cell.center;
+    if ([cell respondsToSelector:@selector(layoutMargins)]) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
+    
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     
     activityIndicator.tag = kLoadingCellActivityIndicatorTag;
     
+    
     [cell addSubview:activityIndicator];
+    
+    [activityIndicator setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    NSLayoutConstraint *centerYConstraint =
+    [NSLayoutConstraint constraintWithItem:activityIndicator
+                                 attribute:NSLayoutAttributeCenterY
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:cell
+                                 attribute:NSLayoutAttributeCenterY
+                                multiplier:1.0
+                                  constant:0.0];
+    [cell addConstraint:centerYConstraint];
+    
+    // Center Horizontally
+    NSLayoutConstraint *centerXConstraint =
+    [NSLayoutConstraint constraintWithItem:activityIndicator
+                                 attribute:NSLayoutAttributeCenterX
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:cell
+                                 attribute:NSLayoutAttributeCenterX
+                                multiplier:1.0
+                                  constant:0.0];
+    [cell addConstraint:centerXConstraint];
+    
+    NSLayoutConstraint *heightConstraint =
+    [NSLayoutConstraint constraintWithItem:activityIndicator
+                                 attribute:NSLayoutAttributeHeight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:64.0];
+    [activityIndicator addConstraint:heightConstraint];
+    
+    NSLayoutConstraint *widthConstraint =
+    [NSLayoutConstraint constraintWithItem:activityIndicator
+                                 attribute:NSLayoutAttributeWidth
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:64.0];
+    [activityIndicator addConstraint:widthConstraint];
     
     [activityIndicator startAnimating];
     
     cell.tag = kLoadingCellTag;
+
     
     return cell;
 }

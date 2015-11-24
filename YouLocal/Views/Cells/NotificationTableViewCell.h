@@ -10,11 +10,12 @@
 
 @interface NotificationTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
-@property (weak, nonatomic) IBOutlet UIImageView *typeImage;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
-@property (weak, nonatomic) IBOutlet UILabel *createdBeforeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *createdBeforeSign;
+@property (strong, nonatomic) UIImageView *avatarImage;
+@property (strong, nonatomic) UIImageView *typeImage;
+@property (strong, nonatomic) UILabel *nameLabel;
+@property (strong, nonatomic) UILabel *typeLabel;
+@property (strong, nonatomic) UILabel *messageLabel;
+@property (strong, nonatomic) UILabel *createdBeforeLabel;
+@property (strong, nonatomic) UILabel *createdBeforeSign;
+@property (strong, nonatomic) UIImageView *timeImage;
 @end

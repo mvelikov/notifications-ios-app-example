@@ -21,7 +21,14 @@
     
     [self.tableView registerClass:[NotificationTableViewCell class]
            forCellReuseIdentifier:@"notificationCell"];
-
+    
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    
+    if ([self.tableView respondsToSelector:@selector(layoutMargins)]) {
+        self.tableView.layoutMargins = UIEdgeInsetsZero;
+    }
     
     [[LibraryAPI sharedInstance] setDelegate:self];
 }
@@ -61,6 +68,10 @@
     [cell.nameLabel setText:[user fullName]];
     [cell.typeLabel setText:[notification type]];
     [cell.messageLabel setText:[notification message]];
+    
+    if ([cell respondsToSelector:@selector(layoutMargins)]) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
     
     return cell;
 }

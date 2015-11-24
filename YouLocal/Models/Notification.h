@@ -14,7 +14,7 @@
 @property (nonatomic) User *user;
 @property (nonatomic, weak) NSURL *imageURL;
 @property (nonatomic) NSDate *createdAt;
-@property (nonatomic) NSString *type, *message, *author;
+@property (nonatomic) NSString *type, *message, *author, *beforeSign;
 
 -(id) initWithUser: (User *) user
               type: (NSString *) type

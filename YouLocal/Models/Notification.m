@@ -16,6 +16,7 @@
         _type = @"";
         _message = @"";
         _createdAt = [NSDate date];
+        _beforeSign = @"";
     }
     
     return self;
@@ -30,6 +31,8 @@
         _type = type;
         _message = message;
         _createdAt = date;
+        
+        _beforeSign = [self createdBeforeSign];
     }
     
     return self;
@@ -51,9 +54,34 @@
                                                         fromDate:_createdAt
                                                           toDate:now
                                                          options:NSCalendarWrapComponents];
-    return [components day];
+    NSInteger difference = [components day];
+    _beforeSign = @"d";
+    
+    if (difference == 0) {
+        components = [gregorianCalendar components:NSCalendarUnitHour
+                                          fromDate:_createdAt
+                                            toDate:now
+                                           options:NSCalendarWrapComponents];
+        
+        difference = [components hour];
+        _beforeSign = @"h";
+        
+        if (difference == 0) {
+            components = [gregorianCalendar components:NSCalendarUnitMinute
+                                              fromDate:_createdAt
+                                                toDate:now
+                                               options:NSCalendarWrapComponents];
+            
+            difference = [components minute];
+            _beforeSign = @"m";
+        }
+    }
+    return difference;
 }
 -(NSString *) createdBeforeSign {
-    return @"d";
+    if ([_beforeSign isEqualToString:@""]) {
+        [self createdBeforeLabel];
+    }
+    return _beforeSign;
 }
 @end

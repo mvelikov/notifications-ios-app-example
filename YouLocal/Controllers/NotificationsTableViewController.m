@@ -21,6 +21,7 @@
     
     [self.tableView registerClass:[NotificationTableViewCell class]
            forCellReuseIdentifier:@"notificationCell"];
+
     
     [[LibraryAPI sharedInstance] setDelegate:self];
 }
@@ -62,6 +63,15 @@
     [cell.messageLabel setText:[notification message]];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 90;
 }
 
 #pragma mark - LibraryAPI delegate

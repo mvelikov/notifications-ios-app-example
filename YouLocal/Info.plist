@@ -17,8 +17,8 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Lato-Bold</string>
-		<string>Lato-Regular</string>
+		<string>Lato-Bol.ttf</string>
+		<string>Lato-Reg.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

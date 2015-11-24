@@ -7,6 +7,7 @@
 //
 
 #import "NotificationsTableViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface NotificationsTableViewController ()
 
@@ -68,6 +69,10 @@
     [cell.nameLabel setText:[user fullName]];
     [cell.typeLabel setText:[notification type]];
     [cell.messageLabel setText:[notification message]];
+    cell.avatarImage.layer.cornerRadius = 16;
+    
+    [cell.createdBeforeLabel setText:[NSString stringWithFormat:@"%ld", (long)[notification createdBeforeLabel]]];
+    [cell.createdBeforeSign setText:[notification createdBeforeSign]];
     
     if ([cell respondsToSelector:@selector(layoutMargins)]) {
         cell.layoutMargins = UIEdgeInsetsZero;

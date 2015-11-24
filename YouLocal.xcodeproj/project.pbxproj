@@ -24,6 +24,9 @@
 		96A5BAED1AF6AC83004587AC /* BasePaginationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAEC1AF6AC83004587AC /* BasePaginationTableViewController.m */; };
 		96A5BAF21AF6AD17004587AC /* NotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAF11AF6AD17004587AC /* NotificationTableViewCell.m */; };
 		96A5BAF51AF6ADB3004587AC /* NotificationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5BAF41AF6ADB3004587AC /* NotificationsTableViewController.m */; };
+		96EAF70C1C04A0B0000F91DA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EAF70B1C04A0B0000F91DA /* QuartzCore.framework */; };
+		96EAF7101C04BA78000F91DA /* Lato-Bol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EAF7091C048034000F91DA /* Lato-Bol.ttf */; };
+		96EAF7111C04BA78000F91DA /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EAF70A1C048034000F91DA /* Lato-Reg.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,7 @@
 		96A5BAF41AF6ADB3004587AC /* NotificationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsTableViewController.m; sourceTree = "<group>"; };
 		96EAF7091C048034000F91DA /* Lato-Bol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bol.ttf"; sourceTree = "<group>"; };
 		96EAF70A1C048034000F91DA /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Reg.ttf"; sourceTree = "<group>"; };
+		96EAF70B1C04A0B0000F91DA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EAF70C1C04A0B0000F91DA /* QuartzCore.framework in Frameworks */,
 				58EA3DD7031EA4A2378B593C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +101,7 @@
 		17355FABB1FD2288B3EAB7A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96EAF70B1C04A0B0000F91DA /* QuartzCore.framework */,
 				229CAD64CC877EBAC099F8A1 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -320,6 +326,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EAF7101C04BA78000F91DA /* Lato-Bol.ttf in Resources */,
+				96EAF7111C04BA78000F91DA /* Lato-Reg.ttf in Resources */,
 				96A5BAB81AF6A21F004587AC /* Main.storyboard in Resources */,
 				96A5BABD1AF6A21F004587AC /* LaunchScreen.xib in Resources */,
 				96A5BAD31AF6A335004587AC /* Podfile in Resources */,

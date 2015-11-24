@@ -34,7 +34,7 @@
                                                                         toItem:self.contentView
                                                                      attribute:NSLayoutAttributeLeading
                                                                     multiplier:1.0
-                                                                      constant:6.0]];
+                                                                      constant:12.0]];
 
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_avatarImage
                                                                      attribute:NSLayoutAttributeCenterY
@@ -58,6 +58,7 @@
                                                                      attribute:NSLayoutAttributeNotAnAttribute
                                                                     multiplier:1.0
                                                                       constant:31]];
+
         
         UIColor *blueNameColor = [UIColor colorWithRed:17/255.0f
                                                  green:107/255.0f
@@ -74,7 +75,7 @@
         
         _nameLabel = [[UILabel alloc] init];
         [_nameLabel setTextColor:blueNameColor];
-        [_nameLabel setFont:[UIFont fontWithName:@"Lito-Bold"
+        [_nameLabel setFont:[UIFont fontWithName:@"Lato-Bold"
                                             size:15]];
         [_nameLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.contentView addSubview:_nameLabel];
@@ -133,7 +134,7 @@
         
         _typeLabel = [[UILabel alloc] init];
         [_typeLabel setTextColor:lightBlueTypeColor];
-        [_typeLabel setFont:[UIFont fontWithName:@"Lito-Regular"
+        [_typeLabel setFont:[UIFont fontWithName:@"Lato-Regular"
                                             size:15]];
         [_typeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.contentView addSubview:_typeLabel];
@@ -187,7 +188,7 @@
         
         _createdBeforeSign = [[UILabel alloc] init];
         
-        UIFont *createdFont = [UIFont fontWithName:@"Lito-Regular"
+        UIFont *createdFont = [UIFont fontWithName:@"Lato-Regular"
                                               size:12];
         UIColor *createdBeforeTextColor = [UIColor colorWithRed:124/255.0
                                                           green:126/255.0
@@ -227,7 +228,7 @@
                                                                         toItem:_createdBeforeSign
                                                                      attribute:NSLayoutAttributeLeading
                                                                     multiplier:1.0
-                                                                      constant:2.0]];
+                                                                      constant:0.0]];
         
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_createdBeforeLabel
                                                                      attribute:NSLayoutAttributeCenterY
@@ -248,7 +249,7 @@
                                                                         toItem:_createdBeforeLabel
                                                                      attribute:NSLayoutAttributeLeading
                                                                     multiplier:1.0
-                                                                      constant:2.0]];
+                                                                      constant:-4.0]];
         
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_timeImage
                                                                      attribute:NSLayoutAttributeWidth
@@ -276,7 +277,7 @@
         
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_timeImage
                                                                      attribute:NSLayoutAttributeLeading
-                                                                     relatedBy:NSLayoutRelationEqual
+                                                                     relatedBy:NSLayoutRelationGreaterThanOrEqual
                                                                         toItem:_nameLabel
                                                                      attribute:NSLayoutAttributeTrailing
                                                                     multiplier:1.0

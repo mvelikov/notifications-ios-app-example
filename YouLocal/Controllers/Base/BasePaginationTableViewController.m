@@ -22,6 +22,8 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    
     [self.view addSubview:self.tableView];
 }
 - (void) preloadItems {
@@ -88,7 +90,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 50;
+    return 44;
 }
 
 - (void)tableView:(UITableView *)tableView

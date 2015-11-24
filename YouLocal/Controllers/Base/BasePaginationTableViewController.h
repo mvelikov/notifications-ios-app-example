@@ -11,8 +11,9 @@
 #define kLoadingCellTag 123
 #define kLoadingCellActivityIndicatorTag 123123
 
-@interface BasePaginationTableViewController : UITableViewController
+@interface BasePaginationTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic) UITableView *tableView;
 @property (nonatomic) NSUInteger currentPage, pages, totalItems, perPage;
 @property (strong, nonatomic) NSMutableArray *items;
 

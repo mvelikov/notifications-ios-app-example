@@ -14,8 +14,18 @@
 
 @implementation BasePaginationTableViewController
 
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self.view addSubview:self.tableView];
+}
 - (void) preloadItems {
-    [NSException raise:@"- (void) preloadItems not implemented in child class" format:nil];
+    [NSException raise:@"- (void) preloadItems not implemented in child class" format:@""];
 }
 
 #pragma mark - Table view data source
@@ -62,11 +72,23 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if ([indexPath row] < [_items count]) {
-        [NSException raise:@"- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath not implemented in child class" format:nil];
-        return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+        static NSString *CellIdentifier = @"Cell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier   forIndexPath:indexPath] ;
+        
+        if (cell == nil)
+        {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        }
+        cell.textLabel.text = @"Hello";
+        return cell;
     } else {
         return [self tableView:tableView loadingCellForRowAtIndexPath:indexPath];
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 50;
 }
 
 - (void)tableView:(UITableView *)tableView

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NotificationsTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    NotificationsTableViewController *viewController = [[NotificationsTableViewController alloc] init];
+
+    self.window.rootViewController = viewController;
+
+    self.window.backgroundColor = [UIColor blueColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -19,6 +19,9 @@
 
     self.title = @"Notifications";
     
+    [self.tableView registerClass:[NotificationTableViewCell class]
+           forCellReuseIdentifier:@"notificationCell"];
+    
     [[LibraryAPI sharedInstance] setDelegate:self];
 }
 

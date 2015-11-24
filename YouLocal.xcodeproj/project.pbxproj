@@ -70,6 +70,8 @@
 		96A5BAF11AF6AD17004587AC /* NotificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationTableViewCell.m; sourceTree = "<group>"; };
 		96A5BAF31AF6ADB3004587AC /* NotificationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsTableViewController.h; sourceTree = "<group>"; };
 		96A5BAF41AF6ADB3004587AC /* NotificationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsTableViewController.m; sourceTree = "<group>"; };
+		96EAF7091C048034000F91DA /* Lato-Bol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bol.ttf"; sourceTree = "<group>"; };
+		96EAF70A1C048034000F91DA /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Reg.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,8 @@
 		96A5BAAC1AF6A21F004587AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96EAF7091C048034000F91DA /* Lato-Bol.ttf */,
+				96EAF70A1C048034000F91DA /* Lato-Reg.ttf */,
 				96A5BAAD1AF6A21F004587AC /* Info.plist */,
 				96A5BAAE1AF6A21F004587AC /* main.m */,
 			);

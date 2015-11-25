@@ -36,10 +36,16 @@
                                            forBarMetrics:UIBarMetricsDefault];
     }
     
-    self.window.rootViewController = navigation;
 
     
-//    self.window.rootViewController = viewController;
+    [navigation.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont fontWithName:@"Lato-Regular" size:23],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];
+
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
+    
+    self.window.rootViewController = navigation;
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -73,8 +79,8 @@
 {
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.frame = CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.width, bounds.size.height + 20);
-    gradientLayer.colors = @[ (__bridge id)[UIColor greenColor].CGColor,
-                              (__bridge id)[UIColor blueColor].CGColor ];
+    gradientLayer.colors = @[ (__bridge id)[UIColor colorWithRed:16/255.0f green:107/255.0f blue:200/255.0f alpha:1].CGColor,
+                              (__bridge id)[UIColor colorWithRed:46/255.0f green:201/255.0f blue:111/255.0f alpha:1].CGColor ];
     gradientLayer.startPoint = CGPointMake(0.0, 0.5);
     gradientLayer.endPoint = CGPointMake(1.0, 0.5);
     

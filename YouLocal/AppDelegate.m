@@ -23,9 +23,25 @@
     // Override point for customization after application launch.
     NotificationsTableViewController *viewController = [[NotificationsTableViewController alloc] init];
 
-    self.window.rootViewController = viewController;
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:viewController];
 
-    self.window.backgroundColor = [UIColor blueColor];
+    CALayer * bgGradientLayer = [self gradientBGLayerForBounds:navigation.navigationBar.bounds];
+    UIGraphicsBeginImageContext(bgGradientLayer.bounds.size);
+    [bgGradientLayer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage * bgAsImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    if (bgAsImage != nil) {
+        [[UINavigationBar appearance] setBackgroundImage:bgAsImage
+                                           forBarMetrics:UIBarMetricsDefault];
+    }
+    
+    self.window.rootViewController = navigation;
+
+    
+//    self.window.rootViewController = viewController;
+
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -51,6 +67,18 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (CALayer *)gradientBGLayerForBounds:(CGRect)bounds
+{
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.frame = CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.width, bounds.size.height + 20);
+    gradientLayer.colors = @[ (__bridge id)[UIColor greenColor].CGColor,
+                              (__bridge id)[UIColor blueColor].CGColor ];
+    gradientLayer.startPoint = CGPointMake(0.0, 0.5);
+    gradientLayer.endPoint = CGPointMake(1.0, 0.5);
+    
+    return gradientLayer;
 }
 
 @end

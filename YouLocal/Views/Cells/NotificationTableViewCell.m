@@ -24,6 +24,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _avatarImage = [[UIImageView alloc] init];
+        _avatarImage.layer.cornerRadius = 16;
+        _avatarImage.clipsToBounds = YES;
         [_avatarImage setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         [self.contentView addSubview:_avatarImage];

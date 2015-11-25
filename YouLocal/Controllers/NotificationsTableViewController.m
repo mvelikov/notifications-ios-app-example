@@ -67,9 +67,8 @@
     
     [cell.avatarImage sd_setImageWithURL:[notification imageURL]];
     [cell.nameLabel setText:[user fullName]];
-    [cell.typeLabel setText:[notification type]];
+    [cell.typeLabel setText:[[notification type] lowercaseString]];
     [cell.messageLabel setText:[notification message]];
-    cell.avatarImage.layer.cornerRadius = 16;
     
     [cell.createdBeforeLabel setText:[NSString stringWithFormat:@"%ld", (long)[notification createdBeforeLabel]]];
     [cell.createdBeforeSign setText:[notification createdBeforeSign]];
